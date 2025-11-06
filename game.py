@@ -23,7 +23,7 @@ class Game:
         print(f"\nPlayers status:\n"
               f"{self.Attacked.__str__()} \n"
               f"{self.Attacker.__str__()}\n"
-              f"Current attacker: {self.Attacked.name} \n")
+              f"Current attacker: {self.Attacker.name} \n")
         return input("If you are interested in a fight, press B, otherwise press Q: ").upper()
 
     def create_player(self):
