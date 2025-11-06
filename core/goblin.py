@@ -6,7 +6,6 @@ from core.Monster import Monster, Monster_type, Weapon
 class Goblin(Monster):
     def __init__(self, name: str) -> None:
         random_number = random.randrange
-        name: str = name
         hp: int = 20
         speed = random_number(5, 10)
         power = random_number(5, 10)

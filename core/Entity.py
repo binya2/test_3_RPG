@@ -7,7 +7,7 @@ class Entity(object):
         self.armor_rating = armor_rating
 
     def speak(self):
-        print(f"Hi, my name is '{self.name}'")
+        pass
 
     def attack(self):
         pass

@@ -6,7 +6,6 @@ from core.Monster import Monster, Monster_type, Weapon
 class Orc(Monster):
     def __init__(self, name: str) -> None:
         random_number = random.randrange
-        name: str = name
         hp: int = 50
         speed = random_number(0, 5)
         power = random_number(10, 15)
