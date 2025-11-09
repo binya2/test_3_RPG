@@ -2,7 +2,7 @@ import random
 
 
 def roll_dice(sides) -> int:
-    return random.randrange(0, sides)
+    return random.randrange(0, sides + 1)
 
 
 class Entity_player(object):
@@ -17,7 +17,7 @@ class Entity_player(object):
         pass
 
     def attack(self, other):
-        attack_planning: int = self.damage()
+        attack_planning: int = self.damage(6)
         if attack_planning > other.armor_rating:
             print(f"{self.name} Attacking {other.name}\n"
                   f"The damage is: {attack_planning}")
@@ -27,8 +27,8 @@ class Entity_player(object):
     def status_check(self):
         return self.hp <= 0
 
-    def damage(self) -> int:
+    def damage(self, sides: int) -> int:
         pass
 
     def __str__(self) -> str:
-           return f"Name: {self.name} - Life: {self.hp}, Speed: {self.speed}, Power: {self.power}, Armor Rating: {self.armor_rating}"
+        return f"Name: {self.name} - Life: {self.hp}, Speed: {self.speed}, Power: {self.power}, Armor Rating: {self.armor_rating}"

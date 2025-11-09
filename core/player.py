@@ -23,9 +23,9 @@ class Player(Entity_player):
     def speak(self):
         print(f"Hi, my name is '{self.name}'!! ")
 
-    def damage(self)-> int:
-        return roll_dice(6) + self.power
+    def damage(self, sides: int) -> int:
+        return roll_dice(sides) + self.power
 
     def __str__(self) -> str:
-        super_str:str = super().__str__()
-        return super_str + f", Profession: {self.profession.__str__().replace('.',': ')}"
+        super_str: str = super().__str__()
+        return super_str + f", Profession: {self.profession.__str__().replace('.', ': ')}"
