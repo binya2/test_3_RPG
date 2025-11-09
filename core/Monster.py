@@ -21,13 +21,13 @@ class Monster(Entity_player):
         self.monster_type: Monster_type = monster_type
         self.weapon: Weapon = weapon
 
-    def damage(self) -> int:
+    def damage(self, sides:int) -> int:
         damage_mul = 1
         if self.weapon == Weapon.Knife:
             damage_mul = 0.5
         if self.weapon == Weapon.Axe:
             damage_mul = 2
-        damage = (roll_dice(6) + self.power) * damage_mul
+        damage = (roll_dice(sides) + self.power) * damage_mul
         return damage
 
     def __str__(self) -> str:
