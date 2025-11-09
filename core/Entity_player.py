@@ -21,6 +21,7 @@ class Entity_player(object):
         if attack_planning > other.armor_rating:
             print(f"{self.name} Attacking {other.name}\n"
                   f"The damage is: {attack_planning}")
+            attack_planning = self.damage(20)
             other.hp -= attack_planning
         return other.status_check()
 
